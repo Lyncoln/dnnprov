@@ -19,10 +19,10 @@ class Dataflow(ProvenanceObject):
         - tag (str): Dataflow tag.
         - transformations (list, optional): Dataflow transformations.
     """
-    def __init__(self, tag, hyperparameters=False, itraining = [], otraining = [], transformations=[]):
+    def __init__(self, tag, itraining = [], otraining = [], transformations=[]):
         ProvenanceObject.__init__(self, tag)
         self.transformations = transformations
-        self.hyperparameters = [hyperparameters,itraining,otraining]
+        self.trainingSpecifications = [itraining,otraining]
         # self.itraining = itraining
         # self.otraining = otraining
 
@@ -53,14 +53,12 @@ class Dataflow(ProvenanceObject):
         self._transformations.append(transformation.get_specification())
 
     @property
-    def hyperparameters(self):
-        return self._hyperparameters
+    def trainingSpecifications(self):
+        return self._trainingSpecifications
 
-    @hyperparameters.setter
-    def hyperparameters(self, hyperparameters):
-        if(hyperparameters[0] == True):
-            assert isinstance(hyperparameters[0], bool), \
-                "The parameter must must be a user."   
+    @trainingSpecifications.setter
+    def trainingSpecifications(self, trainingSpecifications):
+        if(len(trainingSpecifications[0]) == 0 and len(trainingSpecifications[1]) == 0):  
             tf1 = Transformation("TrainingModel")
             tf1_input = Set("iTrainingModel", SetType.INPUT, 
                 [Attribute("OPTIMIZER_NAME", AttributeType.TEXT), 
@@ -78,12 +76,9 @@ class Dataflow(ProvenanceObject):
             tf1.set_sets([tf1_input, tf1_output])
             self.add_transformation(tf1)
 
-        else:
-            assert isinstance(hyperparameters[0], bool), \
-                "The parameter must must be a user." 
-
+        elif(len(trainingSpecifications[0]) > 0 and len(trainingSpecifications[1]) > 0):
             itraining_list = []
-            for element in hyperparameters[1]:
+            for element in trainingSpecifications[0]:
                 if(element[0:3] == "NUM"):
                     itraining_list.append(Attribute(element[4:],AttributeType.NUMERIC))
                 elif(element[0:3] == "STR"):
@@ -93,7 +88,7 @@ class Dataflow(ProvenanceObject):
 
             otraining_list = [Attribute("EPOCH_ID", AttributeType.NUMERIC),
             Attribute("ELAPSED_TIME", AttributeType.TEXT)]
-            for element in hyperparameters[2]:
+            for element in trainingSpecifications[1]:
                 if(element[0:3] == "NUM"):
                     otraining_list.append(Attribute(element[4:],AttributeType.NUMERIC))
                 elif(element[0:3] == "STR"):
