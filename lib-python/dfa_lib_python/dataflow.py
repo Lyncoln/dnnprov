@@ -19,10 +19,12 @@ class Dataflow(ProvenanceObject):
         - tag (str): Dataflow tag.
         - transformations (list, optional): Dataflow transformations.
     """
-    def __init__(self, tag, hyperparameters=False, transformations=[]):
+    def __init__(self, tag, hyperparameters=False, itraining = [], otraining = [], transformations=[]):
         ProvenanceObject.__init__(self, tag)
         self.transformations = transformations
-        self.hyperparameters = hyperparameters
+        self.hyperparameters = [hyperparameters,itraining,otraining]
+        # self.itraining = itraining
+        # self.otraining = otraining
 
     @property
     def transformations(self):
@@ -56,8 +58,8 @@ class Dataflow(ProvenanceObject):
 
     @hyperparameters.setter
     def hyperparameters(self, hyperparameters):
-        if(hyperparameters == True):
-            assert isinstance(hyperparameters, bool), \
+        if(hyperparameters[0] == True):
+            assert isinstance(hyperparameters[0], bool), \
                 "The parameter must must be a user."   
             tf1 = Transformation("TrainingModel")
             tf1_input = Set("iTrainingModel", SetType.INPUT, 
@@ -76,28 +78,57 @@ class Dataflow(ProvenanceObject):
             tf1.set_sets([tf1_input, tf1_output])
             self.add_transformation(tf1)
 
-            tf2 = Transformation("Adaptation")
-            tf2_input = Set("iAdaptation", SetType.INPUT, 
-                [Attribute("EPOCHS_DROP", AttributeType.NUMERIC), 
-                Attribute("DROP_N", AttributeType.NUMERIC),
-                Attribute("INITIAL_LRATE", AttributeType.NUMERIC)])
-            tf2_output = Set("oAdaptation", SetType.OUTPUT, 
-                [Attribute("NEW_LRATE", AttributeType.NUMERIC),
-                Attribute("TIMESTAMP", AttributeType.TEXT),
-                Attribute("EPOCH_ID", AttributeType.NUMERIC),
-                Attribute("ADAPTATION_ID", AttributeType.NUMERIC)])
-            tf1_output.set_type(SetType.INPUT)
-            tf1_output.dependency=tf1._tag
-            tf2.set_sets([tf1_output, tf2_input, tf2_output])
-            self.add_transformation(tf2)     
-            tf3 = Transformation("TestingModel")
-            tf3_output = Set("oTestingModel", SetType.OUTPUT, 
-                [Attribute("LOSS", AttributeType.NUMERIC),
-                Attribute("ACCURACY", AttributeType.NUMERIC)])
-            tf1_output.set_type(SetType.INPUT)
-            tf1_output.dependency=tf1._tag
-            tf3.set_sets([tf1_output, tf3_output])
-            self.add_transformation(tf3)     
+        else:
+            assert isinstance(hyperparameters[0], bool), \
+                "The parameter must must be a user." 
+
+            itraining_list = []
+            for element in hyperparameters[1]:
+                if(element[0:3] == "NUM"):
+                    itraining_list.append(Attribute(element[4:],AttributeType.NUMERIC))
+                elif(element[0:3] == "STR"):
+                    itraining_list.append(Attribute(element[4:],AttributeType.TEXT))
+                else:
+                    raise TypeError("Name must start with 'NUM' if the attribute is numeric, or 'STR' if it is text") 
+
+            otraining_list = [Attribute("EPOCH_ID", AttributeType.NUMERIC),
+            Attribute("ELAPSED_TIME", AttributeType.TEXT)]
+            for element in hyperparameters[2]:
+                if(element[0:3] == "NUM"):
+                    otraining_list.append(Attribute(element[4:],AttributeType.NUMERIC))
+                elif(element[0:3] == "STR"):
+                    otraining_list.append(Attribute(element[4:],AttributeType.TEXT))
+                else:
+                    raise TypeError("Name must start with 'NUM' if the attribute is numeric, or 'STR' if it is text") 
+
+            tf1 = Transformation("TrainingModel")
+            tf1_input = Set("iTrainingModel", SetType.INPUT, itraining_list)
+            tf1_output = Set("oTrainingModel", SetType.OUTPUT, otraining_list)
+            tf1.set_sets([tf1_input, tf1_output])
+            self.add_transformation(tf1)
+
+        tf2 = Transformation("Adaptation")
+        tf2_input = Set("iAdaptation", SetType.INPUT, 
+            [Attribute("EPOCHS_DROP", AttributeType.NUMERIC), 
+            Attribute("DROP_N", AttributeType.NUMERIC),
+            Attribute("INITIAL_LRATE", AttributeType.NUMERIC)])
+        tf2_output = Set("oAdaptation", SetType.OUTPUT, 
+            [Attribute("NEW_LRATE", AttributeType.NUMERIC),
+            Attribute("TIMESTAMP", AttributeType.TEXT),
+            Attribute("EPOCH_ID", AttributeType.NUMERIC),
+            Attribute("ADAPTATION_ID", AttributeType.NUMERIC)])
+        tf1_output.set_type(SetType.INPUT)
+        tf1_output.dependency=tf1._tag
+        tf2.set_sets([tf1_output, tf2_input, tf2_output])
+        self.add_transformation(tf2)     
+        tf3 = Transformation("TestingModel")
+        tf3_output = Set("oTestingModel", SetType.OUTPUT, 
+            [Attribute("LOSS", AttributeType.NUMERIC),
+            Attribute("ACCURACY", AttributeType.NUMERIC)])
+        tf1_output.set_type(SetType.INPUT)
+        tf1_output.dependency=tf1._tag
+        tf3.set_sets([tf1_output, tf3_output])
+        self.add_transformation(tf3)     
 
     def save(self):
         """ Send a post request to the Dataflow Analyzer API to store
