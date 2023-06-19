@@ -11,15 +11,15 @@ import os
 
 
 exps = [
-#{"path":"Exp_1","prov_opt":"Adam","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
+{"path":"Exp_1","prov_opt":"Adam","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
 {"path":"Exp_2","prov_opt":"Adam","prov_act_tt":"relu","prov_act_vel":"relu","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
-#{"path":"Exp_3","prov_opt":"Adam","prov_act_tt":"sigmoid","prov_act_vel":"sigmoid","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
-#{"path":"Exp_4","prov_opt":"Adam","prov_act_tt":"relu","prov_act_vel":"tanh","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
-#{"path":"Exp_5","prov_opt":"RMSProp","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
-#{"path":"Exp_6","prov_opt":"Adam","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[40]+[1],"layers_vel":[2]+8*[64]+[1]},
-#{"path":"Exp_7","prov_opt":"RMSProp","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[40]+[1],"layers_vel":[2]+8*[64]+[1]},
-#{"path":"Exp_8","prov_opt":"Adam","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[20]+[1],"layers_vel":[2]+8*[32]+[1]},
-#{"path":"Exp_9","prov_opt":"RMSProp","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[20]+[1],"layers_vel":[2]+8*[32]+[1]},
+{"path":"Exp_3","prov_opt":"Adam","prov_act_tt":"sigmoid","prov_act_vel":"sigmoid","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
+{"path":"Exp_4","prov_opt":"Adam","prov_act_tt":"relu","prov_act_vel":"tanh","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
+{"path":"Exp_5","prov_opt":"RMSProp","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+8*[20]+[1],"layers_vel":[2]+4*[32]+[1]},
+{"path":"Exp_6","prov_opt":"Adam","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[40]+[1],"layers_vel":[2]+8*[64]+[1]},
+{"path":"Exp_7","prov_opt":"RMSProp","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[40]+[1],"layers_vel":[2]+8*[64]+[1]},
+{"path":"Exp_8","prov_opt":"Adam","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[20]+[1],"layers_vel":[2]+8*[32]+[1]},
+{"path":"Exp_9","prov_opt":"RMSProp","prov_act_tt":"tanh","prov_act_vel":"tanh","layers_tt":[4]+16*[20]+[1],"layers_vel":[2]+8*[32]+[1]},
 ]
 
 local = os.getcwd() + '/mnt/Potato/Experimentos'
