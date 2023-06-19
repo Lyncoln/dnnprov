@@ -365,8 +365,16 @@ class EikonalSolver2D(object):
                  prov_act_tt,
                  prov_act_vel,
                  path,
+                 weight_lb,
+                 weight_lr,
+                 weight_ld,
                  dtype=tf.float32
                  ):
+
+        self.weight_lb = weight_lb
+        self.weight_lr = weight_lr
+        self.weight_ld = weight_ld
+
                  
         # Prov capture
         self.prov_act_tt = prov_act_tt
@@ -468,7 +476,10 @@ class EikonalSolver2D(object):
         'STR_ACTTT',
         'STR_ACTVEL',
         'STR_ARQ_TT',
-        'STR_ARQ_VEL'],
+        'STR_ARQ_VEL',
+        'NUM_WEIGHT_LB',
+        'NUM_WEIGHT_LR',
+        'NUM_WEIGHT_LD'],
         ['NUM_LOSS',
         'NUM_LB',
         'NUM_LR',
@@ -538,7 +549,7 @@ class EikonalSolver2D(object):
             pred=self.tt_data_pred, exact=self.tt_data_tf)
 
         """ Final Loss """
-        self.loss = 25.0 * self.Ld + self.Lr + self.Lb
+        self.loss = self.weight_ld*self.Ld + self.weight_lr*self.Lr + self.weight_lb*self.Lb
 
         """ Optimizers """
         self.global_step = tf.Variable(0, trainable=False, dtype=tf.int64)
@@ -619,7 +630,7 @@ class EikonalSolver2D(object):
         
         
         t1 = Task(1, self.dataflow_tag, self.exec_tag, "TrainingModel")
-        tf1_input = DataSet("iTrainingModel", [Element([self.prov_opt, self.starter_learning_rate, self.adam_its, self.batch_size, self.prov_act_tt, self.prov_act_vel, self.layers_tt, self.layers_vel])])
+        tf1_input = DataSet("iTrainingModel", [Element([self.prov_opt, self.starter_learning_rate, self.adam_its, self.batch_size, self.prov_act_tt, self.prov_act_vel, self.layers_tt, self.layers_vel,self.weight_lb,self.weight_lr,self.weight_ld])])
         t1.add_dataset(tf1_input)
         t1.begin() 
 

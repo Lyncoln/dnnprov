@@ -85,7 +85,10 @@ for element in exps:
                                      prov_opt = element["prov_opt"],
                                      prov_act_tt = element["prov_act_tt"],
                                      prov_act_vel = element["prov_act_vel"],
-                                     path = path)
+                                     path = path,
+                                     weight_lb = 1,
+                                     weight_lr = 1,
+                                     weight_ld = 25)
 
     """ Train the model """
 
