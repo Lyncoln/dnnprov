@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --nodes=1		# Number of nodes
+#SBATCH --ntasks-per-node=24	# Number of tasks per node
+#SBATCH -p gdl		# Partition Queue
+#SBATCH -J kerasprov_alexnet	# Job name
+#SBATCH --time=24:00:00		# Job time
+#SBATCH --exclusive		# Exclusive usage of the nodes
+#SBATCH --mail-type=ALL     	#Envia email quando inicia o job
+#SBATCH --mail-user=oliveiral@cos.ufrj.br
+
+
+
+#echo $SLURM_JOB_NODELIST
+#nodeset -e $SLURM_JOB_NODELIST
+
+#Exportando variaveis de ambiente
+export PATH=/scratch/rtm-uq/lyncoln.oliveira/monetdb/bin:$PATH
+
+#Iniciando a Dfanalyzer
+cd /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/
+./restore-database.sh
+java -jar target/DfAnalyzer-1.0.jar &
+
+#Iniciando os modulos para a GPU do tensorflow 2.2
+module load anaconda3/2020.11
+
+#Ativando o ambiente
+source activate /scratch/rtm-uq/lyncoln.oliveira/envs/pinneikonal-env
+#Executando o código
+export CUDA_VISIBLE_DEVICES=0
+cd /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/Experiments/PINN_eikonal/FEE_PINN_Crosshole
+python -m cProfile main.py > main_job.txt
+
