@@ -34,8 +34,8 @@ for element in exps:
     parser = argparse.ArgumentParser(description="Eikonal Problem")
 
     # Adam its
-    #parser.add_argument('--adam_its', type=int, default=400000)
-    parser.add_argument('--adam_its', type=int, default=4000)
+    parser.add_argument('--adam_its', type=int, default=400000)
+    #parser.add_argument('--adam_its', type=int, default=4000)
 
     # Number of grid points (in each dimension)
     parser.add_argument('--nx', type=int, default=10*20)

@@ -714,7 +714,7 @@ class EikonalSolver2D(object):
             
         #t1.save()
         #t2.save()
-        self.df.to_csv("TimesNoProv"/self.path+".csv")
+        self.df.to_csv("TimesNoProv/"self.path+".csv")
 
     def predict(self, x_star, y_star):
         tf_dict = {self.xr_star_tf: x_star,
