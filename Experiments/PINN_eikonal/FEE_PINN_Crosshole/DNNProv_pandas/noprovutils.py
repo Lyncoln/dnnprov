@@ -453,6 +453,7 @@ class EikonalSolver2D(object):
             None, 1], name="yr_star")
             
         self.df = pd.DataFrame(columns=["iteracao","tempo","valor_loss","lb","ld","lr","learning_rate"])
+        self.df.to_csv("execucoes/"+self.path+".csv") 
         
         
         """ Neural Networks """
@@ -688,11 +689,12 @@ class EikonalSolver2D(object):
                                "tempo":elapsed,
                                "valor_loss":loss_value,
                                "lb": Lb,
-                               "ld": Ld,"lr": Lr,
+                               "ld": Ld,
+                               "lr": Lr,
                                "learning_rate": learning_rate_value}
-                
                 data_metrics = pd.DataFrame(metrics_dic,columns=self.df.columns,index=[0])
-                self.df = pd.concat((self.df,data_metrics),ignore_index=True)    
+                #self.df = pd.concat((self.df,data_metrics),ignore_index=True) 
+                data_metrics.to_csv("execucoes/"+self.path+".csv",mode="a",header=None) 
                 
      
                 
@@ -721,7 +723,7 @@ class EikonalSolver2D(object):
             
         #t1.save()
         #t2.save()
-        self.df.to_csv("execucoes/"+self.path+".csv")
+        #self.df.to_csv("execucoes/"+self.path+".csv")
 
     def predict(self, x_star, y_star):
         tf_dict = {self.xr_star_tf: x_star,
