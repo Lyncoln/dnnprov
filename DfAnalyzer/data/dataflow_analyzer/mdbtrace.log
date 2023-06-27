@@ -1,5 +1,0 @@
-2023-06-20 18:29:20    M_ERROR MAL_SERVER client2              monetdb5/mal/mal_exception.c:104               createExceptionInternal ParseException:SQLparser:3F000!SELECT: no such schema 'information_schema'
-2023-06-20 18:30:48    M_ERROR MAL_SERVER client2              monetdb5/mal/mal_exception.c:104               createExceptionInternal ParseException:SQLparser:3F000!SELECT: no such schema 'otrainingmodel'
-2023-06-20 18:33:11    M_ERROR MAL_SERVER client2              monetdb5/mal/mal_exception.c:104               createExceptionInternal ParseException:SQLparser:42000!SELECT: identifier 'TIME_ELAPSED' unknown
-2023-06-20 18:33:17    M_ERROR MAL_SERVER client2              monetdb5/mal/mal_exception.c:104               createExceptionInternal ParseException:SQLparser:42000!SELECT: identifier 'time_elapsed' unknown
-2023-06-20 18:34:13    M_ERROR MAL_SERVER client2              monetdb5/mal/mal_exception.c:104               createExceptionInternal ParseException:SQLparser:42000!SELECT: no such unary operator 'mean'(varchar)

@@ -1,211 +1,100 @@
-2023-06-19 18:51:20 MSG merovingian[5704]: Merovingian 11.41.29 starting
-2023-06-19 18:51:20 MSG merovingian[5704]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-19 18:51:20 MSG merovingian[5704]: accepting connections on TCP socket localhost:50000
-2023-06-19 18:51:20 MSG merovingian[5704]: accepting connections on TCP socket localhost:50000
-2023-06-19 18:51:20 MSG merovingian[5704]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-19 18:51:20 MSG discovery[5704]: listening for UDP messages on localhost:50000
-2023-06-19 18:51:20 MSG control[5704]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-19 18:51:20 MSG control[5704]: (local): served status list
-2023-06-19 18:51:20 MSG control[5704]: (local): created database 'dataflow_analyzer'
-2023-06-19 18:51:20 MSG control[5704]: (local): served status list
-2023-06-19 18:51:20 MSG control[5704]: (local): released database 'dataflow_analyzer'
-2023-06-19 18:51:20 MSG control[5704]: (local): served status list
-2023-06-19 18:51:20 MSG merovingian[5704]: starting database 'dataflow_analyzer', up min/avg/max: 0s/0s/0s, crash average: 0.00 0.00 0.00 (0-0=0)
-2023-06-19 18:51:21 MSG dataflow_analyzer[5723]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont3152:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-19 18:51:21 ERR dataflow_analyzer[5723]: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5: /scratch/app/anaconda3/2020.11/lib/libuuid.so.1: no version information available (required by /scratch/rtm-uq/lyncoln.oliveira/monetdb/lib64/libmonetdb5.so.31)
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # MonetDB 5 server v11.41.29
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # This is an unreleased version
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # Serving database 'dataflow_analyzer', using 24 threads
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # Found 62.732 GiB available main-memory of which we use 51.126 GiB
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # Visit https://www.monetdb.org/ for further information
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-19 18:51:25 MSG dataflow_analyzer[5723]: # MonetDB/GIS module loaded
-2023-06-19 18:51:33 MSG dataflow_analyzer[5723]: # MonetDB/SQL module loaded
-2023-06-19 19:08:14 MSG merovingian[20274]: Merovingian 11.41.29 starting
-2023-06-19 19:08:14 MSG merovingian[20274]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-19 19:08:14 MSG merovingian[20274]: accepting connections on TCP socket localhost:50000
-2023-06-19 19:08:14 MSG merovingian[20274]: accepting connections on TCP socket localhost:50000
-2023-06-19 19:08:14 MSG merovingian[20274]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-19 19:08:14 MSG discovery[20274]: listening for UDP messages on localhost:50000
-2023-06-19 19:08:14 MSG control[20274]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-19 19:09:36 MSG merovingian[20274]: database 'dataflow_analyzer' has crashed after start on 2023-06-19 18:51:21, attempting restart, up min/avg/max: 0s/0s/0s, crash average: 1.00 0.10 0.03 (1-0=1)
-2023-06-19 19:09:37 MSG dataflow_analyzer[24116]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont14:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-19 19:09:37 ERR dataflow_analyzer[24116]: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5: /scratch/app/anaconda3/2020.11/lib/libuuid.so.1: no version information available (required by /scratch/rtm-uq/lyncoln.oliveira/monetdb/lib64/libmonetdb5.so.31)
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # MonetDB 5 server v11.41.29
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # This is an unreleased version
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # Serving database 'dataflow_analyzer', using 24 threads
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # Found 125.721 GiB available main-memory of which we use 102.463 GiB
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # Visit https://www.monetdb.org/ for further information
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-19 19:09:40 MSG dataflow_analyzer[24116]: # MonetDB/GIS module loaded
-2023-06-19 19:10:23 MSG dataflow_analyzer[24116]: # MonetDB/SQL module loaded
-2023-06-19 19:12:16 ERR dataflow_analyzer[24116]: #client1: createExceptionInternal: !ERROR: ParseException:SQLparser:42S02!SELECT: no such table 'itraniningmodel'
-2023-06-19 19:36:09 MSG merovingian[20274]: caught SIGTERM, starting shutdown sequence
-2023-06-19 19:36:10 MSG control[20274]: control channel closed
-2023-06-19 19:36:10 MSG merovingian[20274]: sending process 24116 (database 'dataflow_analyzer') the TERM signal
-2023-06-19 19:36:11 MSG merovingian[20274]: database 'dataflow_analyzer' has shut down
-2023-06-19 19:39:47 MSG merovingian[831]: Merovingian 11.41.29 starting
-2023-06-19 19:39:47 MSG merovingian[831]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-19 19:39:47 MSG merovingian[831]: accepting connections on TCP socket localhost:50000
-2023-06-19 19:39:47 MSG merovingian[831]: accepting connections on TCP socket localhost:50000
-2023-06-19 19:39:47 MSG merovingian[831]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-19 19:39:47 MSG discovery[831]: listening for UDP messages on localhost:50000
-2023-06-19 19:39:47 MSG control[831]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-19 19:39:47 MSG control[831]: (local): served status list
-2023-06-19 19:39:47 MSG control[831]: (local): destroyed database 'dataflow_analyzer'
-2023-06-19 19:39:47 MSG control[831]: (local): created database 'dataflow_analyzer'
-2023-06-19 19:39:47 MSG control[831]: (local): served status list
-2023-06-19 19:39:47 MSG control[831]: (local): released database 'dataflow_analyzer'
-2023-06-19 19:39:47 MSG control[831]: (local): served status list
-2023-06-19 19:39:47 MSG merovingian[831]: starting database 'dataflow_analyzer', up min/avg/max: 0s/0s/0s, crash average: 0.00 0.00 0.00 (0-0=0)
-2023-06-19 19:39:48 MSG dataflow_analyzer[875]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont3083:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-19 19:39:48 ERR dataflow_analyzer[875]: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5: /scratch/app/anaconda3/2020.11/lib/libuuid.so.1: no version information available (required by /scratch/rtm-uq/lyncoln.oliveira/monetdb/lib64/libmonetdb5.so.31)
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # MonetDB 5 server v11.41.29
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # This is an unreleased version
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # Serving database 'dataflow_analyzer', using 24 threads
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # Found 62.732 GiB available main-memory of which we use 51.126 GiB
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # Visit https://www.monetdb.org/ for further information
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-19 19:39:52 MSG dataflow_analyzer[875]: # MonetDB/GIS module loaded
-2023-06-19 19:40:00 MSG dataflow_analyzer[875]: # MonetDB/SQL module loaded
-2023-06-19 19:59:33 MSG merovingian[2516]: Merovingian 11.41.29 starting
-2023-06-19 19:59:33 MSG merovingian[2516]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-19 19:59:33 MSG merovingian[2516]: accepting connections on TCP socket localhost:50000
-2023-06-19 19:59:33 MSG merovingian[2516]: accepting connections on TCP socket localhost:50000
-2023-06-19 19:59:33 MSG merovingian[2516]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-19 19:59:33 MSG discovery[2516]: listening for UDP messages on localhost:50000
-2023-06-19 19:59:33 MSG control[2516]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-19 19:59:34 MSG control[2516]: (local): served status list
-2023-06-19 19:59:34 MSG control[2516]: (local): destroyed database 'dataflow_analyzer'
-2023-06-19 19:59:34 MSG control[2516]: (local): created database 'dataflow_analyzer'
-2023-06-19 19:59:34 MSG control[2516]: (local): served status list
-2023-06-19 19:59:34 MSG control[2516]: (local): released database 'dataflow_analyzer'
-2023-06-19 19:59:34 MSG control[2516]: (local): served status list
-2023-06-19 19:59:34 MSG merovingian[2516]: starting database 'dataflow_analyzer', up min/avg/max: 0s/0s/0s, crash average: 0.00 0.00 0.00 (0-0=0)
-2023-06-19 19:59:35 MSG dataflow_analyzer[2548]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont3083:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-19 19:59:35 ERR dataflow_analyzer[2548]: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5: /scratch/app/anaconda3/2020.11/lib/libuuid.so.1: no version information available (required by /scratch/rtm-uq/lyncoln.oliveira/monetdb/lib64/libmonetdb5.so.31)
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # MonetDB 5 server v11.41.29
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # This is an unreleased version
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # Serving database 'dataflow_analyzer', using 24 threads
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # Found 62.732 GiB available main-memory of which we use 51.126 GiB
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # Visit https://www.monetdb.org/ for further information
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-19 19:59:38 MSG dataflow_analyzer[2548]: # MonetDB/GIS module loaded
-2023-06-19 19:59:45 MSG dataflow_analyzer[2548]: # MonetDB/SQL module loaded
-2023-06-19 21:04:30 MSG merovingian[114862]: Merovingian 11.41.29 starting
-2023-06-19 21:04:30 MSG merovingian[114862]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-19 21:04:30 MSG merovingian[114862]: accepting connections on TCP socket localhost:50000
-2023-06-19 21:04:30 MSG merovingian[114862]: accepting connections on TCP socket localhost:50000
-2023-06-19 21:04:30 MSG merovingian[114862]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-19 21:04:30 MSG discovery[114862]: listening for UDP messages on localhost:50000
-2023-06-19 21:04:30 MSG control[114862]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-19 21:04:30 MSG control[114862]: (local): served status list
-2023-06-19 21:04:30 MSG control[114862]: (local): destroyed database 'dataflow_analyzer'
-2023-06-19 21:04:30 MSG control[114862]: (local): created database 'dataflow_analyzer'
-2023-06-19 21:04:30 MSG control[114862]: (local): served status list
-2023-06-19 21:04:30 MSG control[114862]: (local): released database 'dataflow_analyzer'
-2023-06-19 21:04:30 MSG control[114862]: (local): served status list
-2023-06-19 21:04:30 MSG merovingian[114862]: starting database 'dataflow_analyzer', up min/avg/max: 0s/0s/0s, crash average: 0.00 0.00 0.00 (0-0=0)
-2023-06-19 21:04:31 MSG dataflow_analyzer[114895]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont4000:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=80 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # MonetDB 5 server v11.41.29
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # This is an unreleased version
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # Serving database 'dataflow_analyzer', using 80 threads
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # Found 375.000 GiB available main-memory of which we use 305.625 GiB
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # Visit https://www.monetdb.org/ for further information
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-19 21:04:33 MSG dataflow_analyzer[114895]: # MonetDB/GIS module loaded
-2023-06-19 21:04:40 MSG dataflow_analyzer[114895]: # MonetDB/SQL module loaded
-2023-06-19 22:21:15 MSG merovingian[125638]: Merovingian 11.41.29 starting
-2023-06-19 22:21:15 MSG merovingian[125638]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-19 22:21:15 MSG merovingian[125638]: accepting connections on TCP socket localhost:50000
-2023-06-19 22:21:15 MSG merovingian[125638]: accepting connections on TCP socket localhost:50000
-2023-06-19 22:21:15 MSG merovingian[125638]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-19 22:21:15 MSG discovery[125638]: listening for UDP messages on localhost:50000
-2023-06-19 22:21:15 MSG control[125638]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-19 22:21:15 MSG control[125638]: (local): served status list
-2023-06-19 22:21:16 MSG control[125638]: (local): destroyed database 'dataflow_analyzer'
-2023-06-19 22:21:16 MSG control[125638]: (local): created database 'dataflow_analyzer'
-2023-06-19 22:21:16 MSG control[125638]: (local): served status list
-2023-06-19 22:21:16 MSG control[125638]: (local): released database 'dataflow_analyzer'
-2023-06-19 22:21:16 MSG control[125638]: (local): served status list
-2023-06-19 22:21:16 MSG merovingian[125638]: starting database 'dataflow_analyzer', up min/avg/max: 0s/0s/0s, crash average: 0.00 0.00 0.00 (0-0=0)
-2023-06-19 22:21:17 MSG dataflow_analyzer[125671]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont4000:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=80 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # MonetDB 5 server v11.41.29
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # This is an unreleased version
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # Serving database 'dataflow_analyzer', using 80 threads
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # Found 375.000 GiB available main-memory of which we use 305.625 GiB
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # Visit https://www.monetdb.org/ for further information
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-19 22:21:19 MSG dataflow_analyzer[125671]: # MonetDB/GIS module loaded
-2023-06-19 22:21:25 MSG dataflow_analyzer[125671]: # MonetDB/SQL module loaded
-2023-06-20 18:11:26 MSG merovingian[22129]: Merovingian 11.41.29 starting
-2023-06-20 18:11:26 MSG merovingian[22129]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-20 18:11:26 MSG merovingian[22129]: accepting connections on TCP socket localhost:50000
-2023-06-20 18:11:26 MSG merovingian[22129]: accepting connections on TCP socket localhost:50000
-2023-06-20 18:11:26 MSG merovingian[22129]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-20 18:11:26 MSG discovery[22129]: listening for UDP messages on localhost:50000
-2023-06-20 18:11:26 MSG control[22129]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-20 18:11:41 MSG merovingian[22129]: database 'dataflow_analyzer' has crashed after start on 2023-06-19 22:21:16, attempting restart, up min/avg/max: 0s/0s/0s, crash average: 1.00 0.10 0.03 (1-0=1)
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont14:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # MonetDB 5 server v11.41.29
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # This is an unreleased version
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # Serving database 'dataflow_analyzer', using 24 threads
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # Found 125.721 GiB available main-memory of which we use 102.463 GiB
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # Visit https://www.monetdb.org/ for further information
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-20 18:11:42 MSG dataflow_analyzer[22671]: # MonetDB/GIS module loaded
-2023-06-20 18:24:31 MSG dataflow_analyzer[22671]: # MonetDB/SQL module loaded
-2023-06-20 18:29:20 ERR dataflow_analyzer[22671]: #client2: createExceptionInternal: !ERROR: ParseException:SQLparser:3F000!SELECT: no such schema 'information_schema'
-2023-06-20 18:30:48 ERR dataflow_analyzer[22671]: #client2: createExceptionInternal: !ERROR: ParseException:SQLparser:3F000!SELECT: no such schema 'otrainingmodel'
-2023-06-20 18:33:11 ERR dataflow_analyzer[22671]: #client2: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!SELECT: identifier 'TIME_ELAPSED' unknown
-2023-06-20 18:33:17 ERR dataflow_analyzer[22671]: #client2: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!SELECT: identifier 'time_elapsed' unknown
-2023-06-20 18:34:13 ERR dataflow_analyzer[22671]: #client2: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!SELECT: no such unary operator 'mean'(varchar)
-2023-06-20 18:36:33 MSG merovingian[22129]: caught SIGTERM, starting shutdown sequence
-2023-06-20 18:36:34 MSG control[22129]: control channel closed
-2023-06-20 18:36:34 MSG merovingian[22129]: sending process 22671 (database 'dataflow_analyzer') the TERM signal
-2023-06-20 18:36:34 MSG merovingian[22129]: database 'dataflow_analyzer' has shut down
-2023-06-20 18:36:39 MSG merovingian[14694]: Merovingian 11.41.29 starting
-2023-06-20 18:36:39 MSG merovingian[14694]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
-2023-06-20 18:36:39 MSG merovingian[14694]: accepting connections on TCP socket localhost:50000
-2023-06-20 18:36:39 MSG merovingian[14694]: accepting connections on TCP socket localhost:50000
-2023-06-20 18:36:39 MSG merovingian[14694]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
-2023-06-20 18:36:39 MSG discovery[14694]: listening for UDP messages on localhost:50000
-2023-06-20 18:36:39 MSG control[14694]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
-2023-06-20 18:36:46 MSG merovingian[14694]: starting database 'dataflow_analyzer', up min/avg/max: 24m/24m/24m, crash average: 0.00 0.10 0.03 (2-1=1)
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont14:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # MonetDB 5 server v11.41.29
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # This is an unreleased version
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # Serving database 'dataflow_analyzer', using 24 threads
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # Found 125.721 GiB available main-memory of which we use 102.463 GiB
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # Copyright (c) 1993 - July 2008 CWI.
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # Visit https://www.monetdb.org/ for further information
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # MonetDB/GIS module loaded
-2023-06-20 18:36:47 MSG dataflow_analyzer[14807]: # MonetDB/SQL module loaded
-2023-06-20 18:37:59 MSG merovingian[14694]: caught SIGTERM, starting shutdown sequence
-2023-06-20 18:37:59 MSG control[14694]: control channel closed
-2023-06-20 18:37:59 MSG merovingian[14694]: sending process 14807 (database 'dataflow_analyzer') the TERM signal
-2023-06-20 18:38:00 MSG merovingian[14694]: database 'dataflow_analyzer' has shut down
+2023-06-25 22:35:27 MSG merovingian[163855]: Merovingian 11.41.29 starting
+2023-06-25 22:35:27 MSG merovingian[163855]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
+2023-06-25 22:35:27 MSG merovingian[163855]: accepting connections on TCP socket localhost:50000
+2023-06-25 22:35:27 MSG merovingian[163855]: accepting connections on TCP socket localhost:50000
+2023-06-25 22:35:27 MSG merovingian[163855]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
+2023-06-25 22:35:27 MSG discovery[163855]: listening for UDP messages on localhost:50000
+2023-06-25 22:35:27 MSG control[163855]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
+2023-06-25 22:35:27 MSG control[163855]: (local): served status list
+2023-06-25 22:35:27 MSG control[163855]: (local): created database 'dataflow_analyzer'
+2023-06-25 22:35:27 MSG control[163855]: (local): served status list
+2023-06-25 22:35:27 MSG control[163855]: (local): released database 'dataflow_analyzer'
+2023-06-25 22:35:27 MSG control[163855]: (local): served status list
+2023-06-25 22:35:27 MSG merovingian[163855]: starting database 'dataflow_analyzer', up min/avg/max: 0s/0s/0s, crash average: 0.00 0.00 0.00 (0-0=0)
+2023-06-25 22:35:28 MSG dataflow_analyzer[163875]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont4000:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=80 --set max_clients=64 --set sql_optimizer=default_pipe
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # MonetDB 5 server v11.41.29
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # This is an unreleased version
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # Serving database 'dataflow_analyzer', using 80 threads
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # Found 375.000 GiB available main-memory of which we use 305.625 GiB
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # Copyright (c) 1993 - July 2008 CWI.
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # Visit https://www.monetdb.org/ for further information
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
+2023-06-25 22:35:30 MSG dataflow_analyzer[163875]: # MonetDB/GIS module loaded
+2023-06-25 22:35:37 MSG dataflow_analyzer[163875]: # MonetDB/SQL module loaded
+2023-06-25 22:46:41 MSG merovingian[165932]: Merovingian 11.41.29 starting
+2023-06-25 22:46:41 MSG merovingian[165932]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
+2023-06-25 22:46:41 MSG merovingian[165932]: accepting connections on TCP socket localhost:50000
+2023-06-25 22:46:41 MSG merovingian[165932]: accepting connections on TCP socket localhost:50000
+2023-06-25 22:46:41 MSG merovingian[165932]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
+2023-06-25 22:46:41 MSG discovery[165932]: listening for UDP messages on localhost:50000
+2023-06-25 22:46:41 MSG control[165932]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
+2023-06-25 22:46:41 MSG control[165932]: (local): served status list
+2023-06-25 22:46:41 MSG control[165932]: (local): destroyed database 'dataflow_analyzer'
+2023-06-25 22:46:41 MSG control[165932]: (local): created database 'dataflow_analyzer'
+2023-06-25 22:46:41 MSG control[165932]: (local): served status list
+2023-06-25 22:46:41 MSG control[165932]: (local): released database 'dataflow_analyzer'
+2023-06-25 22:46:41 MSG control[165932]: (local): served status list
+2023-06-25 22:46:42 MSG merovingian[165932]: starting database 'dataflow_analyzer', up min/avg/max: 0s/0s/0s, crash average: 0.00 0.00 0.00 (0-0=0)
+2023-06-25 22:46:43 MSG dataflow_analyzer[165964]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont4000:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=80 --set max_clients=64 --set sql_optimizer=default_pipe
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # MonetDB 5 server v11.41.29
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # This is an unreleased version
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # Serving database 'dataflow_analyzer', using 80 threads
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # Found 375.000 GiB available main-memory of which we use 305.625 GiB
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # Copyright (c) 1993 - July 2008 CWI.
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # Visit https://www.monetdb.org/ for further information
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
+2023-06-25 22:46:47 MSG dataflow_analyzer[165964]: # MonetDB/GIS module loaded
+2023-06-25 22:46:53 MSG dataflow_analyzer[165964]: # MonetDB/SQL module loaded
+2023-06-26 19:12:01 MSG merovingian[26365]: Merovingian 11.41.29 starting
+2023-06-26 19:12:01 MSG merovingian[26365]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
+2023-06-26 19:12:01 MSG merovingian[26365]: accepting connections on TCP socket localhost:50000
+2023-06-26 19:12:01 MSG merovingian[26365]: accepting connections on TCP socket localhost:50000
+2023-06-26 19:12:01 MSG merovingian[26365]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
+2023-06-26 19:12:01 MSG discovery[26365]: listening for UDP messages on localhost:50000
+2023-06-26 19:12:01 MSG control[26365]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
+2023-06-26 19:12:15 MSG merovingian[26365]: database 'dataflow_analyzer' has crashed after start on 2023-06-25 22:46:42, attempting restart, up min/avg/max: 0s/0s/0s, crash average: 1.00 0.10 0.03 (1-0=1)
+2023-06-26 19:12:16 MSG dataflow_analyzer[27821]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont14:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # MonetDB 5 server v11.41.29
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # This is an unreleased version
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # Serving database 'dataflow_analyzer', using 24 threads
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # Found 125.721 GiB available main-memory of which we use 102.463 GiB
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # Copyright (c) 1993 - July 2008 CWI.
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # Visit https://www.monetdb.org/ for further information
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
+2023-06-26 19:12:17 MSG dataflow_analyzer[27821]: # MonetDB/GIS module loaded
+2023-06-26 19:20:42 MSG merovingian[26365]: caught SIGTERM, starting shutdown sequence
+2023-06-26 19:20:42 MSG control[26365]: control channel closed
+2023-06-26 19:24:54 MSG dataflow_analyzer[27821]: # MonetDB/SQL module loaded
+2023-06-26 19:24:54 MSG merovingian[26365]: sending process 27821 (database 'dataflow_analyzer') the TERM signal
+2023-06-26 19:24:54 MSG merovingian[26365]: database 'dataflow_analyzer' has shut down
+2023-06-26 19:24:54 MSG merovingian[26365]: Merovingian 11.41.29 stopped
+2023-06-26 19:25:22 MSG merovingian[17880]: Merovingian 11.41.29 starting
+2023-06-26 19:25:22 MSG merovingian[17880]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
+2023-06-26 19:25:22 MSG merovingian[17880]: accepting connections on TCP socket localhost:50000
+2023-06-26 19:25:22 MSG merovingian[17880]: accepting connections on TCP socket localhost:50000
+2023-06-26 19:25:22 MSG merovingian[17880]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
+2023-06-26 19:25:22 MSG discovery[17880]: listening for UDP messages on localhost:50000
+2023-06-26 19:25:22 MSG control[17880]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
+2023-06-26 19:25:42 MSG merovingian[17880]: starting database 'dataflow_analyzer', up min/avg/max: 12m/12m/12m, crash average: 0.00 0.10 0.03 (2-1=1)
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont3075:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # MonetDB 5 server v11.41.29
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # This is an unreleased version
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # Serving database 'dataflow_analyzer', using 24 threads
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # Found 62.732 GiB available main-memory of which we use 51.126 GiB
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # Copyright (c) 1993 - July 2008 CWI.
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # Visit https://www.monetdb.org/ for further information
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
+2023-06-26 19:25:43 MSG dataflow_analyzer[17904]: # MonetDB/GIS module loaded
+2023-06-26 19:25:47 MSG dataflow_analyzer[17904]: # MonetDB/SQL module loaded
+2023-06-26 19:28:13 MSG merovingian[17880]: caught SIGTERM, starting shutdown sequence
+2023-06-26 19:28:13 MSG control[17880]: control channel closed
+2023-06-26 19:28:13 MSG merovingian[17880]: sending process 17904 (database 'dataflow_analyzer') the TERM signal
+2023-06-26 19:28:14 MSG merovingian[17880]: database 'dataflow_analyzer' has shut down
