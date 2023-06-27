@@ -1,0 +1,43 @@
+#!/bin/bash
+#SBATCH --nodes=1		# Number of nodes
+#SBATCH --ntasks-per-node=24	# Number of tasks per node
+#SBATCH -p gdl		# Partition Queue
+#SBATCH -J eikonal_prov	# Job name
+#SBATCH --time=34:00:00		# Job time
+#SBATCH --exclusive		# Exclusive usage of the nodes
+#SBATCH --mail-type=ALL     	#Envia email quando inicia o job
+#SBATCH --mail-user=oliveiral@cos.ufrj.br
+
+
+
+#echo $SLURM_JOB_NODELIST
+#nodeset -e $SLURM_JOB_NODELIST
+
+#Exportando variaveis de ambiente
+export PATH=/scratch/rtm-uq/lyncoln.oliveira/monetdb/bin:$PATH
+
+#Iniciando a Dfanalyzer
+cd /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/
+./restore-database.sh
+java -jar target/DfAnalyzer-1.0.jar &
+
+#Iniciando os modulos para a GPU do tensorflow 2.2
+module load anaconda3/2020.11
+
+#Ativando o ambiente
+source activate /scratch/rtm-uq/lyncoln.oliveira/envs/pinneikonal-env
+#Executando o código
+export CUDA_VISIBLE_DEVICES=0
+cd /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/Experiments/PINN_eikonal/FEE_PINN_Crosshole/DNNProv_prov
+
+for i in Exp_1 Exp_2 Exp_3 Exp_4 Exp_5 Exp_6 Exp_7 Exp_8 Exp_9;
+do
+
+echo "----------------- $i -----------------"
+date
+
+python -m cProfile provmain.py --exp=$i > ./cProfile/provmain_$i.txt
+
+date
+done
+
