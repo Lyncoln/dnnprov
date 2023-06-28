@@ -1,0 +1,45 @@
+#!/bin/bash
+#SBATCH --nodes=1		# Number of nodes
+#SBATCH --ntasks-per-node=24	# Number of tasks per node
+#SBATCH -p gdl		# Partition Queue
+#SBATCH -J eikonal_prov	# Job name
+#SBATCH --time=34:00:00		# Job time
+#SBATCH --exclusive		# Exclusive usage of the nodes
+#SBATCH --mail-type=ALL     	#Envia email quando inicia o job
+#SBATCH --mail-user=oliveiral@cos.ufrj.br
+
+
+#Exportando variaveis de ambiente
+export PATH=/scratch/rtm-uq/lyncoln.oliveira/monetdb/bin:$PATH
+
+#Iniciando a Dfanalyzer
+cd /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/Experiments/PINN_eikonal/FEE_PINN_Crosshole/Comparar_tempos/SDUMONT_GDL/DNNProv_prov/DfAnalyzer/
+./restore-database.sh
+java -jar target/DfAnalyzer-1.0.jar &
+
+#Ativando o ambiente
+source activate /scratch/rtm-uq/lyncoln.oliveira/envs/pinneikonal-env
+
+#Executando o código
+export CUDA_VISIBLE_DEVICES=0
+cd /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/Experiments/PINN_eikonal/FEE_PINN_Crosshole/Comparar_tempos/SDUMONT_GDL/DNNProv_prov
+
+for j in 1000 10000 100000;
+
+do
+echo "----------------- $j -----------------"
+date
+mkdir cProfile_Exp5_$j
+	for i in {1..6};
+	do
+
+	echo "----------------- $i -----------------"
+	date
+	
+	python -m cProfile provmain.py --exp=Exp_5 --adam_its=$j > ./cProfile_Exp5_$j/provmain_$i.txt
+	  
+	date
+	done
+date
+done
+
