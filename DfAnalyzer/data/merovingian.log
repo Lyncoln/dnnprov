@@ -98,3 +98,31 @@
 2023-06-26 19:28:13 MSG control[17880]: control channel closed
 2023-06-26 19:28:13 MSG merovingian[17880]: sending process 17904 (database 'dataflow_analyzer') the TERM signal
 2023-06-26 19:28:14 MSG merovingian[17880]: database 'dataflow_analyzer' has shut down
+2023-06-27 13:31:10 MSG merovingian[21888]: Merovingian 11.41.29 starting
+2023-06-27 13:31:10 MSG merovingian[21888]: monitoring dbfarm /scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data
+2023-06-27 13:31:10 MSG merovingian[21888]: accepting connections on TCP socket localhost:50000
+2023-06-27 13:31:10 MSG merovingian[21888]: accepting connections on TCP socket localhost:50000
+2023-06-27 13:31:10 MSG merovingian[21888]: accepting connections on UNIX domain socket /tmp/.s.monetdb.50000
+2023-06-27 13:31:10 MSG discovery[21888]: listening for UDP messages on localhost:50000
+2023-06-27 13:31:10 MSG control[21888]: accepting connections on UNIX domain socket /tmp/.s.merovingian.50000
+2023-06-27 13:31:21 MSG merovingian[21888]: starting database 'dataflow_analyzer', up min/avg/max: 2m/7m/12m, crash average: 0.00 0.10 0.03 (3-2=1)
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: arguments: /scratch/rtm-uq/lyncoln.oliveira/monetdb/bin/mserver5 --dbpath=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer --set merovingian_uri=mapi:monetdb://sdumont14:50000/dataflow_analyzer --set mapi_listenaddr=none --set mapi_usock=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock --set monet_vault_key=/scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.vaultkey --set gdk_nr_threads=24 --set max_clients=64 --set sql_optimizer=default_pipe
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # MonetDB 5 server v11.41.29
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # This is an unreleased version
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # Serving database 'dataflow_analyzer', using 24 threads
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # Compiled for x86_64-pc-linux-gnu/64bit with 128bit integers
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # Found 125.721 GiB available main-memory of which we use 102.463 GiB
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # Copyright (c) 1993 - July 2008 CWI.
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # Copyright (c) August 2008 - 2021 MonetDB B.V., all rights reserved
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # Visit https://www.monetdb.org/ for further information
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # Listening for UNIX domain connection requests on mapi:monetdb:///scratch/rtm-uq/lyncoln.oliveira/Git/dnnprov/DfAnalyzer/data/dataflow_analyzer/.mapi.sock
+2023-06-27 13:31:22 MSG dataflow_analyzer[22100]: # MonetDB/GIS module loaded
+2023-06-27 13:31:24 MSG dataflow_analyzer[22100]: # MonetDB/SQL module loaded
+2023-06-27 13:31:24 ERR dataflow_analyzer[22100]: #client1: createExceptionInternal: !ERROR: InvalidCredentialsException:checkCredentials:invalid credentials for user 'monetdb'
+2023-06-27 13:31:24 ERR dataflow_analyzer[22100]: #client2: createExceptionInternal: !ERROR: InvalidCredentialsException:checkCredentials:invalid credentials for user 'monetdb'
+2023-06-27 13:32:03 ERR dataflow_analyzer[22100]: #client3: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!syntax error, unexpected '=' in: "set schema =="
+2023-06-27 13:32:33 ERR dataflow_analyzer[22100]: #client3: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!syntax error, unexpected '=', expecting sqlINT or '?' in: "select * from otrainingmodel limit="
+2023-06-27 13:34:20 ERR dataflow_analyzer[22100]: #client3: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!MAX: aggregate functions not allowed in WHERE clause
+2023-06-27 13:35:17 ERR dataflow_analyzer[22100]: #client3: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!MAX: aggregate functions not allowed in WHERE clause
+2023-06-27 13:42:10 ERR dataflow_analyzer[22100]: #client3: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!SELECT: identifier 'training' unknown
+2023-06-27 13:48:03 ERR dataflow_analyzer[22100]: #client3: createExceptionInternal: !ERROR: ParseException:SQLparser:42000!SELECT: cannot use non GROUP BY column 'r2' in query results without an aggregate function
